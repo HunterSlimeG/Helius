@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2bi6v00sq3as"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xhjks"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cbg8i"]
+
+[node name="Arc Furnace" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_xhjks")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("CylinderMesh_cbg8i")
