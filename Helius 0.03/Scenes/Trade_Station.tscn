@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://per3s11exoot"]
+
+[ext_resource type="Script" path="res://Scripts/Trade_Station.gd" id="1_a7loj"]
+[ext_resource type="BoxMesh" uid="uid://bhsiqwew68gco" path="res://Resources/3D/Meshes/Trade_Station.tres" id="2_t4yd8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pubtf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4tuhv"]
+albedo_color = Color(0.427493, 0.427493, 0.427493, 1)
+
+[node name="Trade Station" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_a7loj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_pubtf")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = ExtResource("2_t4yd8")
+material = SubResource("StandardMaterial3D_4tuhv")
