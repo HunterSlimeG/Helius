@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2bi6v00sq3as"]
+
+[ext_resource type="Script" path="res://Scripts/Furnace.gd" id="1_ori5b"]
+[ext_resource type="CylinderMesh" uid="uid://cuct4lv43rl4e" path="res://Resources/3D/Meshes/Furnace.tres" id="2_0hyt1"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yi7t5"]
+height = 1.0
+
+[node name="Arc Furnace" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_ori5b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_yi7t5")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = ExtResource("2_0hyt1")
